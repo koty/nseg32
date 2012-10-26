@@ -63,9 +63,15 @@
       <DependentUpon>App.ts</DependentUpon>
     </Content>
     <Content Include="index.html" />
+    <Content Include="Scripts\App.min.js">
+      <DependentUpon>App.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery.d.ts" />
     <Content Include="Scripts\Shachiku.js">
       <DependentUpon>Shachiku.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Shachiku.min.js">
+      <DependentUpon>Shachiku.js</DependentUpon>
     </Content>
     <Content Include="tools\nkf.exe" />
     <Content Include="Web.config" />
@@ -108,7 +114,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>for %25%25i in (..\Scripts\*.js) do "$(ProjectDir)tools\nkf.exe" -w8 --overwrite %25%25i</PostBuildEvent>
+    <PostBuildEvent>for %25%25i in (..\Scripts\*.js) do "$(ProjectDir)tools\nkf.exe" -w8 --overwrite %25%25i
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
